@@ -3,10 +3,12 @@ import org.junit.jupiter.api.Test;
 import ru.netology.Radio;
 
 public class RadioTest {
+
+    Radio servise = new Radio();
     @Test
     void nextStation() {
-        Radio servise = new Radio();
 
+        Radio radio = new Radio(5);
         servise.setStation(8);
         servise.nextStation();
         int expected = 9;
@@ -16,7 +18,6 @@ public class RadioTest {
     }
     @Test
     void nextStation2() {
-        Radio servise = new Radio();
 
         servise.setStation(9);
         servise.nextStation();
@@ -27,7 +28,6 @@ public class RadioTest {
     }
     @Test
     void prevStation() {
-        Radio servise = new Radio();
 
         servise.setStation(8);
         servise.prevStation();
@@ -38,7 +38,6 @@ public class RadioTest {
     }
     @Test
     void prevStation2() {
-        Radio servise = new Radio();
 
         servise.setStation(0);
         servise.prevStation();
@@ -49,7 +48,6 @@ public class RadioTest {
     }
     @Test
     void setterStation() {
-        Radio servise = new Radio();
 
         servise.setStation(5);
         int expected = 5;
@@ -58,7 +56,7 @@ public class RadioTest {
     }
     @Test
     void setterStation2() {
-        Radio servise = new Radio();
+
 
         servise.setStation(5);
         servise.setStation(20);
@@ -68,7 +66,6 @@ public class RadioTest {
     }
     @Test
     void setterStation3() {
-        Radio servise = new Radio();
 
         servise.setStation(5);
         servise.setStation(-4);
@@ -78,7 +75,6 @@ public class RadioTest {
     }
     @Test
     void increaseVolume() {
-        Radio servise = new Radio();
 
         servise.setCurrentSound(150);
         servise.increaseUpSound();
@@ -88,7 +84,6 @@ public class RadioTest {
     }
     @Test
     void increaseVolume2() {
-        Radio servise = new Radio();
 
         servise.setCurrentSound(98);
         servise.increaseUpSound();
@@ -98,7 +93,6 @@ public class RadioTest {
     }
     @Test
     void increaseVolume3() {
-        Radio servise = new Radio();
 
         servise.setCurrentSound(-3);
         servise.increaseDownSound();
